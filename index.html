@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PopChoice</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <main id="app">
+      <!-- Questions View -->
+      <section id="questions-view" class="card show">
+        <h1>🍿 PopChoice</h1>
+
+        <label class="field">
+          <span>1) What’s your favorite movie and why?</span>
+          <textarea id="q1" rows="3" placeholder="e.g., Spider-Man: No Way Home because it’s exciting"></textarea>
+        </label>
+
+        <label class="field">
+          <span>2) Do you want something New or Classic?</span>
+          <select id="q2">
+            <option value="">Choose…</option>
+            <option>New</option>
+            <option>Classic</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>3) Fun or Serious?</span>
+          <select id="q3">
+            <option value="">Choose…</option>
+            <option>Fun</option>
+            <option>Serious</option>
+          </select>
+        </label>
+
+        <button id="go-btn" class="primary">Let’s Go</button>
+        <div id="loading" class="loading">Thinking…</div>
+        <div id="error" class="error"></div>
+      </section>
+
+      <!-- Output View -->
+      <section id="output-view" class="card">
+        <div id="movie-slot"></div>
+
+        <!-- NEW: Next Movie button -->
+        <button id="next-btn" class="secondary">Next Movie</button>
+
+        <button id="again-btn" class="primary">Go Again</button>
+      </section>
+    </main>
+
+    <script type="module" src="/src/index.js"></script>
+  </body>
+</html>
